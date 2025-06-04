@@ -47,19 +47,9 @@
         .hero {
             text-align: center;
             padding: 80px 20px;
-            background: url('https://i.ibb.co/0tXv0kZ/medical-bg.jpg') no-repeat center center/cover;
+            background: #0044ff;
             color: white;
             position: relative;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 68, 255, 0.7);
         }
         
         .hero-content {
@@ -72,13 +62,11 @@
         .hero h1 {
             font-size: 48px;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
         
         .hero p {
             font-size: 22px;
             margin-bottom: 30px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
         
         .whatsapp-btn {
@@ -152,12 +140,15 @@
         .service-img {
             height: 180px;
             overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e3f2fd;
         }
         
         .service-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            max-width: 100%;
+            max-height: 100%;
             transition: 0.5s;
         }
         
@@ -264,6 +255,9 @@
             border-radius: 10px;
             padding: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .certificate img {
@@ -318,7 +312,7 @@
     <!-- القسم البطولي -->
     <section id="hero" class="hero">
         <div class="hero-content">
-            <img src="https://i.ibb.co/0tXv0kZ/medical-logo.png" alt="شعار جراجوس" style="max-width:200px; margin-bottom:20px; border-radius:50%; border:5px solid white;">
+            <div style="font-size: 100px; margin-bottom: 20px;">🏥</div>
             <h1>مرحباً بكم في جراجوس ماركت</h1>
             <p>حلول طبية متكاملة لمستشفيات وعيادات الصعيد</p>
             <p>📍 قنا، صعيد مصر | 📞 01097167179</p>
@@ -332,7 +326,7 @@
         <div class="services-container">
             <div class="service-card">
                 <div class="service-img">
-                    <img src="https://i.ibb.co/0tXv0kZ/sms-service.jpg" alt="أنظمة رسائل">
+                    <div style="font-size: 80px; color: #0044ff;">📱</div>
                 </div>
                 <div class="service-content">
                     <h3>أنظمة الرسائل الذكية</h3>
@@ -342,7 +336,7 @@
             
             <div class="service-card">
                 <div class="service-img">
-                    <img src="https://i.ibb.co/0tXv0kZ/medical-equipment.jpg" alt="أجهزة طبية">
+                    <div style="font-size: 80px; color: #0044ff;">💉</div>
                 </div>
                 <div class="service-content">
                     <h3>توريد أجهزة طبية</h3>
@@ -352,7 +346,7 @@
             
             <div class="service-card">
                 <div class="service-img">
-                    <img src="https://i.ibb.co/0tXv0kZ/medical-training.jpg" alt="تدريب طبي">
+                    <div style="font-size: 80px; color: #0044ff;">👨‍⚕️</div>
                 </div>
                 <div class="service-content">
                     <h3>تدريب الكوادر الطبية</h3>
@@ -399,20 +393,23 @@
     <footer id="contact">
         <div class="certificates">
             <div class="certificate">
-                <img src="https://i.ibb.co/0tXv0kZ/cairo-uni-logo.png" alt="شهادة جامعة القاهرة">
+                <div style="font-size: 60px; color: #0044ff;">🏛️</div>
+                <p>جامعة القاهرة</p>
             </div>
             <div class="certificate">
-                <img src="https://i.ibb.co/0tXv0kZ/moh-logo.png" alt="شهادة وزارة الصحة">
+                <div style="font-size: 60px; color: #0044ff;">➕</div>
+                <p>وزارة الصحة</p>
             </div>
             <div class="certificate">
-                <img src="https://i.ibb.co/0tXv0kZ/iso-logo.png" alt="شهادة الجودة">
+                <div style="font-size: 60px; color: #0044ff;">✅</div>
+                <p>شهادة الجودة</p>
             </div>
         </div>
         
         <div class="contact-info">
-            <p>📞 +الهاتف:201097167179<</p>
+            <p>📞 الهاتف: 01097167179</p>
             <p>✉️ الإيميل: contacted@hishamguoshymarket.com</p>
-            <p>📍 العنوان:جراجوس، قوص، قنا، مصر</p>
+            <p>📍 العنوان: جراجوس قوص، قنا، مصر</p>
         </div>
         
         <div class="copyright">
@@ -429,9 +426,6 @@
             const phone = document.getElementById('phone').value;
             const clinic = document.getElementById('clinic').value;
             const date = document.getElementById('date').value;
-            
-            // هنا سيتم إضافة كود إرسال الرسالة عبر Twilio
-            // (النسخة الكاملة سأرسلها لك على الواتساب)
             
             // رسالة تأكيد للمستخدم
             alert(`تم استلام حجزك ${name}!\nسنرسل تأكيدًا لرقمك ${phone} خلال دقيقتين`);
